@@ -1,23 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:supabase_carparking_app/constants/config.dart';
+import 'package:supabase_carparking_app/provider/supabase_provider.dart';
 import 'package:supabase_carparking_app/screens/booking.dart';
+import 'package:supabase_carparking_app/screens/email_verification.dart';
 import 'package:supabase_carparking_app/screens/favorite.dart';
 import 'package:supabase_carparking_app/screens/notification.dart';
 import 'package:supabase_carparking_app/screens/parking_details.dart';
 import 'package:supabase_carparking_app/screens/parking_ticket.dart';
 import 'package:supabase_carparking_app/screens/parking_timer.dart';
-import 'package:supabase_carparking_app/screens/email_verification.dart';
 import 'package:supabase_carparking_app/screens/profile.dart';
 import 'package:supabase_carparking_app/screens/profile_signup.dart';
 import 'package:supabase_carparking_app/screens/signup.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+
 import 'screens/home.dart';
 import 'screens/login.dart';
 import 'screens/parking_area.dart';
 import 'screens/parking_lot.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Supabase.initialize(
+    url: supabaseUrl,
+    anonKey: supabaseAnonKey,
+  );
   runApp(const MainApp());
 }
+
+SupabaseProvider supabaseProvider = SupabaseProvider();
+SupabaseClient supabase = Supabase.instance.client;
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});

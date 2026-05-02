@@ -8,6 +8,6 @@ const redColor = Color(0xff800200);
 
 
 //Supabase Configration
-const supabaseUrl = "https://omgxnkrdwircbodlipka.supabase.co/rest/v1/";
+const supabaseUrl = "https://omgxnkrdwircbodlipka.supabase.co";
 const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9tZ3hua3Jkd2lyY2JvZGxpcGthIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU1NDI3NjIsImV4cCI6MjA5MTExODc2Mn0.OTD8hlmN_rbzGhplhPqnKAWKsp9Vznlwth36M6e94_I";
  
