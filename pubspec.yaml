@@ -7,7 +7,7 @@ environment:
   sdk: '>=3.1.5 <4.0.0'
 
 dependencies:
-  carousel_slider: ^4.2.1
+  carousel_slider: ^5.1.2
   empty_widget: ^0.0.5
   file_picker: ^8.0.0+1
   flutter:
